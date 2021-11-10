@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: civo-crt
+spec:
+  secretName: civo-tls
+  issuerRef: 
+    kind: ClusterIssuer
+    name: letsencrypt
+  commonName: "198b0948-6e16-4e90-9e3a-9323625dac2b.k8s.civo.com"
+  dnsNames:
+    - "198b0948-6e16-4e90-9e3a-9323625dac2b.k8s.civo.com"

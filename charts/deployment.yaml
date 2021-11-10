@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: demo-go-app
+  name: demo-go-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demo-go-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: demo-go-app
+    spec:
+      containers:
+      - image: zylwin/demo-go-app
+        name: demo-go-app
+        resources: {}
+status: {}
